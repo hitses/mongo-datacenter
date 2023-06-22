@@ -5,4 +5,8 @@ export interface PostCard {
   content: string;
   image: string;
   date: Date;
+  previous: string;
+  previousTitle: string;
+  next: string;
+  nextTitle: string;
 }

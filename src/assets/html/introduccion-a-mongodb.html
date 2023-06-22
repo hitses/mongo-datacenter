@@ -1,0 +1,148 @@
+<h1>Introducción a MongoDB</h1>
+<h2>Base de datos de documentos</h2>
+<p>
+  Un registro en MongoDB es un documento, que es una estructura de datos
+  compuesta por pares de campo y valor. Los documentos de MongoDB son similares
+  a los objetos JSON. Los valores de los campos pueden incluir otros documentos,
+  matrices y matrices de documentos.
+</p>
+<img
+  src="https://www.mongodb.com/docs/manual/images/crud-annotated-document.bakedsvg.svg"
+  alt="Un documento MongoDB."
+/>
+<p>Las ventajas del uso de documentos son:</p>
+<ul>
+  <li>
+    Los documentos corresponden a tipos de datos nativos de muchos lenguajes de
+    programación.
+  </li>
+  <li>
+    Los documentos y matrices integrados reducen la necesidad de costosas
+    uniones.
+  </li>
+  <li>El esquema dinámico admite el polimorfismo fluido.</li>
+</ul>
+<h3>Colecciones/Vistas/Vistas materializadas bajo demanda</h3>
+<p>
+  MongoDB almacena documentos en
+  <a target="_blank" href="/bases-de-datos-y-colecciones">colecciones</a>. Las
+  colecciones son análogas a las tablas de las bases de datos relacionales.
+</p>
+<p>Además de colecciones, MongoDB soporta:</p>
+<ul>
+  <li>
+    <a target="_blank" href="/vistas">Vistas</a> de sólo lectura (a partir de
+    MongoDB 3.4)
+  </li>
+  <li>
+    <a target="_blank" href="/vistas-materializadas"
+      >Vistas materializadas bajo demanda</a
+    >
+    (a partir de MongoDB 4.2).
+  </li>
+</ul>
+<h2>Características principales</h2>
+<h3>Alto rendimiento</h3>
+<p>
+  MongoDB proporciona una persistencia de datos de alto rendimiento. En
+  particular,
+</p>
+<ul>
+  <li>
+    La compatibilidad con modelos de datos incrustados reduce la actividad de
+    E/S en el sistema de base de datos.
+  </li>
+  <li>
+    Los índices permiten consultas más rápidas y pueden incluir claves de
+    documentos y matrices incrustados.
+  </li>
+</ul>
+<h3>API de consulta</h3>
+<p>
+  La API de consulta de MongoDB admite
+  <a target="_blank" href="crud">operaciones de lectura y escritura (CRUD)</a>,
+  así como:
+</p>
+<ul>
+  <li>
+    <a target="_blank" href="proceso-de-agregacion">Agregación de datos</a>
+  </li>
+  <li>
+    <a target="_blank" href="busqueda-de-texto">Búsqueda de texto</a> y
+    <a target="_blank" href="tutorial-geoespacial">consultas geoespaciales</a>.
+  </li>
+</ul>
+<div>
+  <h2>Consejo</h2>
+  <h3>Véase también:</h3>
+  <ul>
+    <li>
+      <a target="_blank" href="comparativa-sql"
+        >Gráfico de asignación de SQL a MongoDB</a
+      >
+    </li>
+    <li>
+      <a target="_blank" href="sql-agregacion-comparacion"
+        >Gráfico de asignación de SQL a agregación</a
+      >
+    </li>
+  </ul>
+</div>
+<h3>Alta disponibilidad</h3>
+<p>
+  La facilidad de replicación de MongoDB, llamada
+  <a target="_blank" href="replicacion">conjunto de réplicas</a>, proporciona:
+</p>
+<ul>
+  <li>conmutación automática por error</li>
+  <li>redundancia de datos.</li>
+</ul>
+<p>
+  Un <a target="_blank" href="replicacion">conjunto de réplicas</a> es un grupo
+  de servidores MongoDB que mantienen el mismo conjunto de datos, proporcionando
+  redundancia y aumentando la disponibilidad de los datos.
+</p>
+<h3>Escalabilidad horizontal</h3>
+<p>
+  MongoDB proporciona escalabilidad horizontal como parte de su funcionalidad
+  principal:
+</p>
+<ul>
+  <li>
+    <a target="_blank" href="fragmentacion">La fragmentación</a> distribuye los
+    datos a través de un cluster de máquinas.
+  </li>
+  <li>
+    A partir de la versión 3.4, MongoDB soporta la creación de
+    <a target="_blank" href="almacenamiento-por-zonas"
+      >almacenamiento por zonas</a
+    >
+    de datos basadas en la clave de fragmentación. En un cluster equilibrado,
+    MongoDB dirige las lecturas y escrituras cubiertas por una zona sólo a
+    aquellos fragmentos dentro de la zona.
+  </li>
+</ul>
+<h3>Soporte para múltiples motores de almacenamiento</h3>
+<p>
+  MongoDB soporta múltiples
+  <a target="_blank" href="motores-de-almacenamiento"
+    >motores de almacenamiento</a
+  >:
+</p>
+<ul>
+  <li>
+    <a target="_blank" href="wiredtiger">Motor de almacenamiento WiredTiger</a>
+    (incluyendo soporte para
+    <a target="_blank" href="encriptacion-en-reposo">encriptación en reposo</a
+    >).
+  </li>
+  <li>
+    <a target="_blank" href="motor-de-almacenamiento-en-memoria"
+      >Motor de almacenamiento en memoria</a
+    >.
+  </li>
+</ul>
+<p>
+  Además, MongoDB proporciona una API de motor de almacenamiento conectable que
+  permite a terceros desarrollar motores de almacenamiento para MongoDB.
+</p>

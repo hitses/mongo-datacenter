@@ -14,7 +14,9 @@ export class PostListComponent {
 
   ngOnInit(): void {
     this.http.get<PostCard[]>('assets/i18n/es.json').subscribe({
-      next: (data) => (this.posts = data),
+      next: (data) => {
+        this.posts = data;
+      },
       error: (error) =>
         console.error('Error al cargar el archivo JSON:', error),
     });

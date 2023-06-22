@@ -1,4 +1,7 @@
-<h1>{{ post.title }}</h1>
-<p>{{ post.content }}</p>
+<div [innerHTML]="post"></div>
 
+<a *ngIf="jsonPost.previous !== ''" routerLink="/">{{ jsonPost.previous }}</a>
 <a routerLink="/">Inicio</a>
+<a *ngIf="jsonPost.next !== ''" routerLink="/primeros-pasos">{{
+  jsonPost.nextTitle
+}}</a>
