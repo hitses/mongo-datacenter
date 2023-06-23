@@ -1,1 +1,10 @@
+<div class="themeButton" (click)="toggleTheme()">
+  <img class="sunIcon" *ngIf="isDarkTheme" src="assets/imgs/sun.svg" alt="" />
+  <img
+    class="moonIcon"
+    *ngIf="!isDarkTheme"
+    src="assets/imgs/moon.svg"
+    alt=""
+  />
+</div>
 <router-outlet></router-outlet>

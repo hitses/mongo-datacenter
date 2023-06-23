@@ -134,10 +134,61 @@ table {
 
 /* Common
 ========================================================================== */
-
-h1 {
-  color: coral;
+.themeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  z-index: 1;
 }
 
+.sunIcon {
+  fill: #f39f18;
+  background-color: skyblue;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+}
+
+.moonIcon {
+  fill: #818181;
+  background-color: #1f1f1f;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+}
 /* Common
+========================================================================== */
+
+/* Light Theme
+========================================================================== */
+@import "themes/light-theme";
+
+body {
+  h1 {
+    color: $primary-color;
+  }
+  background-color: $background-color;
+  color: $text-color;
+}
+/* Light Theme
+========================================================================== */
+
+/* Dark Theme
+========================================================================== */
+@import "themes/dark-theme";
+
+body.dark-theme {
+  h1 {
+    color: $primary-color;
+  }
+  background-color: $background-color;
+  color: $text-color;
+}
+
+/* Dark Theme
 ========================================================================== */
