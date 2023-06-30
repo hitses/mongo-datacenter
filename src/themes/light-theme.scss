@@ -1,3 +1,9 @@
-$background-color: #fff;
+@import "variables";
+
+$background-color: white;
+
+$title-first: $slate;
+$title-second: $forest;
+
 $text-color: #1f1f1f;
 $primary-color: #17a2b8;

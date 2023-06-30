@@ -1,7 +1,20 @@
 <p>Banner</p>
-<h1>
-  Mongo
-  <div>DataCenter</div>
-</h1>
+<div class="main-title">
+  <img
+    *ngIf="theme.length === 0"
+    src="assets/imgs/MongoDB_Logomark_ForestGreen.svg"
+    alt="Logotipo de MongoDB"
+  />
+  <img
+    *ngIf="theme.length === 1"
+    src="assets/imgs/MongoDB_Logomark_SpringGreen.svg"
+    alt="Logotipo de MongoDB"
+  />
+  <h1>
+    <span class="word1">Mongo</span>
+    <span class="word2">Data</span>
+    <span class="word3">Center</span>
+  </h1>
+</div>
 
 <app-post-list></app-post-list>

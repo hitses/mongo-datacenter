@@ -169,11 +169,32 @@ table {
 @import "themes/light-theme";
 
 body {
-  h1 {
-    color: $primary-color;
-  }
   background-color: $background-color;
-  color: $text-color;
+
+  .main-title {
+    h1 {
+      color: $title-first;
+      .word3 {
+        color: $title-second;
+      }
+    }
+  }
+
+  h1 {
+    color: $forest;
+  }
+
+  h2 {
+    color: $forest;
+  }
+
+  h3 {
+    color: $forest;
+  }
+
+  p {
+    color: black;
+  }
 }
 /* Light Theme
 ========================================================================== */
@@ -183,12 +204,54 @@ body {
 @import "themes/dark-theme";
 
 body.dark-theme {
-  h1 {
-    color: $primary-color;
-  }
   background-color: $background-color;
-  color: $text-color;
+
+  .main-title {
+    h1 {
+      color: $title-first;
+      .word3 {
+        color: $title-second;
+      }
+    }
+  }
+
+  h1 {
+    color: $spring;
+  }
+
+  h2 {
+    color: $spring;
+  }
+
+  h3 {
+    color: $spring;
+  }
+
+  p {
+    color: white;
+  }
 }
 
 /* Dark Theme
 ========================================================================== */
+
+.main-title {
+  height: 100px;
+  display: flex;
+  // align-items: center;
+  h1 {
+    font-size: 40px;
+  }
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
